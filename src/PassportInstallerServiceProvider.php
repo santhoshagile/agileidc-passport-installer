@@ -1,10 +1,10 @@
 <?php
 
-namespace AgileIDC\PassportInstaller;
+namespace SantuAgile\PassportInstaller;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use AgileIDC\PassportInstaller\Commands\InstallCommand;
+use SantuAgile\PassportInstaller\Commands\InstallCommand;
 
 class PassportInstallerServiceProvider extends ServiceProvider
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace AgileIDC\PassportInstaller\Commands;
+namespace SantuAgile\PassportInstaller\Commands;
 
 use Illuminate\Console\Command;
 

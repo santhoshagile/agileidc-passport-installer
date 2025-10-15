@@ -1,6 +1,6 @@
 <?php
 
-namespace AgileIDC\PassportInstaller\Http\Controllers;
+namespace SantuAgile\PassportInstaller\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

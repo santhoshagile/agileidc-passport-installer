@@ -1,11 +1,11 @@
 {
-    "name": "agileidc/passport-installer",
+    "name": "santuagile/passport-installer",
     "description": "Easily install Laravel Passport with routes, controllers, and migrations for Laravel 8.2",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "AgileIDC\\PassportInstaller\\": "src/"
+            "SantuAgile\\PassportInstaller\\": "src/"
         }
     },
     "require": {
@@ -15,7 +15,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AgileIDC\\PassportInstaller\\PassportInstallerServiceProvider"
+                "SantuAgile\\PassportInstaller\\PassportInstallerServiceProvider"
             ]
         }
     }

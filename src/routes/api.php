@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use AgileIDC\PassportInstaller\Http\Controllers\AuthController;
+use SantuAgile\PassportInstaller\Http\Controllers\AuthController;
 
 Route::prefix('auth')->group(function () {
     Route::post('register', [AuthController::class, 'register']);
