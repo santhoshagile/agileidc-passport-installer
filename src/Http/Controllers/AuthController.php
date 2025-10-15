@@ -24,9 +24,15 @@ class AuthController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        $token = $user->createToken('API Token')->accessToken;
+        $tokenResult = $user->createToken('API Token');
 
-        return response()->json(['user' => $user, 'token' => $token], 201);
+        return response()->json([
+            'user' => $user,
+            'token' => $tokenResult->plainTextToken ?? $tokenResult->accessToken, // string token
+        ], 201);
+        // $token = $user->createToken('API Token')->accessToken;
+
+        // return response()->json(['user' => $user, 'token' => $token], 201);
     }
 
     public function login(Request $request)
@@ -36,9 +42,15 @@ class AuthController extends Controller
         }
 
         $user = Auth::user();
-        $token = $user->createToken('API Token')->accessToken;
+        $tokenResult = $user->createToken('API Token');
 
-        return response()->json(['user' => $user, 'token' => $token]);
+        return response()->json([
+            'user' => $user,
+            'token' => $tokenResult->plainTextToken ?? $tokenResult->accessToken, // string token
+        ]);
+        // $token = $user->createToken('API Token')->accessToken;
+
+        // return response()->json(['user' => $user, 'token' => $token]);
     }
 
     public function user(Request $request)
