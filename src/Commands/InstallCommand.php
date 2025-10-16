@@ -16,6 +16,10 @@ class InstallCommand extends Command
         $this->call('migrate');
         $this->call('passport:install');
 
+        $this->call('vendor:publish', [
+            '--provider' => 'Laravel\\Passport\\PassportServiceProvider',
+        ]);
+
         $this->info('✅ Passport Installed Successfully.');
         $this->info('✅ Routes, controllers, and migrations loaded.');
     }

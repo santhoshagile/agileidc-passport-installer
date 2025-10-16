@@ -4,6 +4,7 @@ namespace Illuminate\Foundation\Support\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Passport\Passport;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -46,5 +47,11 @@ class AuthServiceProvider extends ServiceProvider
     public function policies()
     {
         return $this->policies;
+    }
+
+    public function boot()
+    {
+        $this->registerPolicies();
+        Passport::routes();
     }
 }
