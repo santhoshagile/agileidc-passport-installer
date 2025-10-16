@@ -10,13 +10,18 @@
     },
     "require": {
         "laravel/framework": "^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0",
-        "laravel/passport": "^10.0 || ^11.0"
+        "laravel/passport": "^13.2"
     },
     "extra": {
         "laravel": {
             "providers": [
                 "SantuAgile\\PassportInstaller\\PassportInstallerServiceProvider"
             ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
         }
     }
 }
